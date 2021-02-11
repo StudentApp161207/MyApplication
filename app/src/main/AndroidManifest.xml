@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".MainMenu"></activity>
+        <activity android:name=".Courselist_y1"></activity>
+        <activity android:name=".Coursepage_y1" />
+        <activity android:name=".Coursepage" />
+        <activity android:name=".MainMenu" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,9 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainMenu">
+    tools:context=".MainActivity"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    android:id="@+id/nav_view">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/toolbar"
+            android:background="@color/design_default_color_on_primary"/>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/Fragment_container">
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                tools:ignore="MissingConstraints">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="230dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/back"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="150dp"
+                                android:text="DEPARTMENT OF COMPUTER SCIENCE"
+                                android:textColor="#ffffff"
+                                android:textSize="18sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="215dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="135dp"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="10dp">
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+                                        <ImageView
+                                            android:layout_width="50dp"
+                                            android:id="@+id/ImageView1"
+                                            android:layout_height="50dp"
+                                            android:src="@drawable/ic_action_name"
+                                            android:layout_centerInParent="true"
+                                            tools:ignore="ContentDescription">
+                                        </ImageView>
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="TIMETABLE"
+                                            android:textSize="16sp"
+                                            android:layout_below="@+id/ImageView1"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginBottom="10dp">
+                                        </TextView>
+
+                                        <Button
+                                            android:id="@+id/button1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:backgroundTint="#00FFFFFF">
+
+                                        </Button>
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical"
+                                    android:layout_marginStart="5dp">
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+                                        <ImageView
+                                            android:layout_width="50dp"
+                                            android:id="@+id/ImageView2"
+                                            android:layout_height="50dp"
+                                            android:src="@drawable/ic_action_course"
+                                            android:layout_centerInParent="true"
+                                            tools:ignore="ContentDescription">
+                                        </ImageView>
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="COURSES"
+                                            android:textSize="16sp"
+                                            android:layout_below="@+id/ImageView2"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginBottom="10dp">
+                                        </TextView>
+
+                                        <Button
+                                            android:id="@+id/button2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:backgroundTint="#00FFFFFF">
+
+                                        </Button>
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </ScrollView>
+
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/drawer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        app:headerLayout="@layout/header"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        app:menu="@menu/drawermenu">
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
