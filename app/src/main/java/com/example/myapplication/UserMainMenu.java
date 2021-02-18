@@ -18,9 +18,7 @@ import androidx.appcompat.widget.Toolbar;
 import com.google.android.material.internal.NavigationMenu;
 import com.google.android.material.navigation.NavigationView;
 
-import static com.example.myapplication.preferences.*;
-
-public class MainMenu extends AppCompatActivity  {
+public class UserMainMenu extends AppCompatActivity  {
     private  DrawerLayout drawerLayout;
     Button btn1,btn2;
 
@@ -41,14 +39,14 @@ public class MainMenu extends AppCompatActivity  {
         btn1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(MainMenu.this,PdfUpload.class);
+                Intent intent1 = new Intent(UserMainMenu.this,PdfUpload.class);
                 startActivity(intent1);
             }
         });
         btn2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent2 = new Intent(MainMenu.this,Coursepage.class);
+                Intent intent2 = new Intent(UserMainMenu.this,Coursepage.class);
                 startActivity(intent2);
             }
         });
@@ -74,13 +72,12 @@ public class MainMenu extends AppCompatActivity  {
 
     }
 
-    public void logout(MenuItem item){
-        startActivity(new Intent(MainMenu.this,TeacherLogin.class));
+
+    public void logout(MenuItem item) {
+        startActivity(new Intent(UserMainMenu.this,StudentLogin.class));
         preferences.clearData(this);
         finish();
     }
-
-
 }
 
 

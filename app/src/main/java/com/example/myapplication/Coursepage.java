@@ -24,19 +24,6 @@ public class Coursepage extends AppCompatActivity {
                 startActivity(intenty1);
             }
         });
-        y2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intenty2 = new Intent(Coursepage.this,Courselist_y1.class);
-                startActivity(intenty2);
-            }
-        });
-        y3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intenty3 = new Intent(Coursepage.this,Courselist_y1.class);
-                startActivity(intenty3);
-            }
-        });
+
     }
 }

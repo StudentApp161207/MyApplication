@@ -16,29 +16,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Maintitle"
+            android:layout_margin="5dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:id="@+id/maintext"
+            android:textColor="@color/black">
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Subtitle"
+            android:id="@+id/subtext"
+            android:textColor="@color/material_on_surface_disabled"
+            android:textSize="15dp"
+            android:textStyle="bold">
+
+        </TextView>
     </LinearLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Maintitle"
-        android:layout_margin="5dp"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:id="@+id/maintext"
-        android:textColor="@color/black">
-    </TextView>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="Subtitle"
-        android:id="@+id/subtext"
-        android:textColor="@color/material_on_surface_disabled"
-        android:textSize="15dp"
-        android:textStyle="bold">
-
-    </TextView>
 
 </LinearLayout>

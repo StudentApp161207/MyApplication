@@ -7,7 +7,7 @@
             android:title="Dashboard" />
         <item android:id="@+id/Timetable" android:title="Timetable" android:icon="@drawable/ic_baseline_calendar_view_day_24"/>
         <item android:id="@+id/Course" android:title="Course" android:icon="@drawable/ic_baseline_wysiwyg_24"/>
-        <item android:id="@+id/logout" android:title="Logout" android:icon="@drawable/ic_baseline_power_settings_new_24"/>
+        <item android:id="@+id/logout" android:title="Logout" android:onClick="logout" android:icon="@drawable/ic_baseline_power_settings_new_24"/>
     </group>
 
 

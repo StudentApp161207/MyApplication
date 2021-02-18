@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="17dp"
+    android:gravity="center"
+    android:background="@drawable/back"
+    tools:context=".TeacherLogin">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="Teacher Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/olive"
+        app:boxBackgroundColor="@color/white"
+        app:hintTextColor="@color/olive">
+        <com.google.android.material.textfield.TextInputEditText
+            android:drawableTint="@color/olive"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/ic_user"
+            android:id="@+id/teacher_Login_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:hint="Username"
+            android:inputType="text"
+            android:drawableStart="@drawable/ic_user" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/olive"
+        app:boxBackgroundColor="@color/white"
+        app:hintTextColor="@color/olive"
+        app:passwordToggleDrawable="@drawable/ic_pass_icon_selector"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:drawableTint="@color/olive"
+            android:drawablePadding="10dp"
+            android:id="@+id/teacherLoginPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ic_lock"
+            android:hint="Password"
+            android:background="@color/white"
+            android:inputType="textPassword"
+            android:drawableStart="@drawable/ic_lock" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/teacherLoginBtn"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_round"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:layout_width="match_parent"
+        android:text="L O G I N"
+        android:layout_height="wrap_content" />
+
+    <!--    <LinearLayout
+            android:id="@+id/goSignUP"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Want to be a new User"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:text="SIGNUP"
+                android:textColor="@color/colorPrimary" />
+        </LinearLayout>-->
+
+
+</LinearLayout>

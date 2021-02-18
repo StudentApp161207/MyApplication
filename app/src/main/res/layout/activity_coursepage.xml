@@ -19,7 +19,8 @@
             android:text="COURSES"
             android:textColor="#ffffff"
             android:textSize="18sp"
-            android:textStyle="bold">
+            android:textStyle="bold"
+            tools:ignore="HardcodedText">
 
         </TextView>
     </LinearLayout>
@@ -49,7 +50,8 @@
             android:layout_margin="30dp"
 
             android:backgroundTint="#365723"
-            android:text="Second Year">
+            android:text="Second Year"
+            tools:ignore="HardcodedText,UnusedAttribute">
 
         </Button>
 
@@ -61,7 +63,8 @@
             android:layout_margin="30dp"
 
             android:backgroundTint="#365723"
-            android:text="Third Year">
+            android:text="Third Year"
+            tools:ignore="HardcodedText,UnusedAttribute">
 
         </Button>
 
