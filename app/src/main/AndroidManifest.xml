@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".Calendar"></activity>
+        <activity android:name=".AddEvent"></activity>
+        <activity android:name=".Calendar" />
         <activity android:name=".ViewTimeTable" />
         <activity android:name=".SelectYear" />
         <activity android:name=".StudentLogin" />

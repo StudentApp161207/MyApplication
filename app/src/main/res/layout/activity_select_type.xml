@@ -84,7 +84,7 @@
                     android:layout_height="100dp"
                     android:background="@drawable/ovalsahpe"
                     android:padding="12dp"
-                    android:src="@drawable/stud" />
+                    android:src="@drawable/student1" />
 
 
 

@@ -21,7 +21,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.FirebaseDatabase;
 
 
-public class     myAdapter extends FirebaseRecyclerAdapter<FileInfo, myAdapter.myviewholder> {
+public class  myAdapter extends FirebaseRecyclerAdapter<FileInfo, myAdapter.myviewholder> {
 
     String url="https://my-application-c0d64-default-rtdb.firebaseio.com/";
 

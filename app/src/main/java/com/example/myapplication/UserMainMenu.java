@@ -20,7 +20,7 @@ import com.google.android.material.navigation.NavigationView;
 
 public class UserMainMenu extends AppCompatActivity  {
     private  DrawerLayout drawerLayout;
-    Button btn1,btn2;
+    Button btn1,btn2,btn3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +36,7 @@ public class UserMainMenu extends AppCompatActivity  {
         toggle.syncState();
         btn1 = (Button) findViewById(R.id.button1);
         btn2 = (Button) findViewById(R.id.button2);
+        btn3 = (Button) findViewById(R.id.button3);
         btn1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -47,6 +48,13 @@ public class UserMainMenu extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
                 Intent intent2 = new Intent(UserMainMenu.this,Coursepage.class);
+                startActivity(intent2);
+            }
+        });
+        btn3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(UserMainMenu.this,Calendar.class);
                 startActivity(intent2);
             }
         });
