@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".SelectYear"></activity>
+        <activity android:name=".Calendar"></activity>
+        <activity android:name=".ViewTimeTable" />
+        <activity android:name=".SelectYear" />
         <activity android:name=".StudentLogin" />
         <activity android:name=".TeacherLogin" />
         <activity android:name=".SelectType" />

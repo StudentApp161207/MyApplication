@@ -60,9 +60,11 @@
                             </TextView>
                         </LinearLayout>
 
+
                         <LinearLayout
+                            android:id="@+id/row1"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="150dp"
                             android:orientation="vertical"
                             android:layout_marginTop="215dp"
                             android:layout_marginLeft="10dp"
@@ -70,7 +72,7 @@
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="135dp"
+                                android:layout_height="150dp"
                                 android:orientation="horizontal"
                                 android:layout_marginBottom="10dp">
                                 <androidx.cardview.widget.CardView
@@ -149,6 +151,109 @@
 
                                         <Button
                                             android:id="@+id/button2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:backgroundTint="#00FFFFFF"
+                                            tools:ignore="UnusedAttribute">
+
+                                        </Button>
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/row2"
+                            android:layout_below="@+id/row1"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="10dp">
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        tools:ignore="TooDeepLayout">
+                                        <ImageView
+                                            android:layout_width="50dp"
+                                            android:id="@+id/ImageView3"
+                                            android:layout_height="50dp"
+                                            android:src="@drawable/ic_baseline_calendar"
+                                            android:layout_centerInParent="true"
+                                            tools:ignore="ContentDescription">
+                                        </ImageView>
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="CALENDAR"
+                                            android:textSize="16sp"
+                                            android:layout_below="@+id/ImageView3"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginBottom="10dp"
+                                            tools:ignore="HardcodedText">
+                                        </TextView>
+
+                                        <Button
+                                            android:id="@+id/button3"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:backgroundTint="#00FFFFFF"
+                                            tools:ignore="UnusedAttribute">
+
+                                        </Button>
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical"
+                                    android:layout_marginStart="5dp">
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+                                        <ImageView
+                                            android:layout_width="50dp"
+                                            android:id="@+id/ImageView4"
+                                            android:layout_height="50dp"
+                                            android:src="@drawable/ic_attendance"
+                                            android:layout_centerInParent="true"
+                                            tools:ignore="ContentDescription">
+                                        </ImageView>
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="ATTENDANCE"
+                                            android:textSize="16sp"
+                                            android:layout_below="@+id/ImageView4"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginBottom="10dp"
+                                            tools:ignore="HardcodedText">
+                                        </TextView>
+
+                                        <Button
+                                            android:id="@+id/button4"
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent"
                                             android:backgroundTint="#00FFFFFF"

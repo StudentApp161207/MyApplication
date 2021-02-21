@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:background="@drawable/button_round"
+
         android:padding="20dp">
 
         <ImageView
@@ -28,11 +28,19 @@
             android:layout_margin="20dp"
             android:layout_toRightOf="@+id/pdf"
             android:text="This is the file name"
-            android:textColor="@color/white"
+            android:textColor="@color/olive"
             android:textAllCaps="true"
             android:textSize="15sp"
             android:textStyle="bold">
 
         </TextView>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:id="@+id/menumore"
+            android:src="@drawable/ic_baseline_more"
+            android:layout_alignParentEnd="true"
+            android:padding="5dp"
+            android:layout_alignParentRight="true" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

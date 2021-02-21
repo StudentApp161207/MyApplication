@@ -24,11 +24,10 @@ import java.util.List;
 import java.util.Objects;
 
 public class TeacherLogin extends AppCompatActivity {
-    public static Activity fa;
+    protected static Activity fa;
     private TextInputEditText teacherIdEt,teacherPassword;
-    private List<String> teacherIdList=new ArrayList<>();
-    private List<String> passwordList=new ArrayList<>();
-    private AppCompatButton teacherLogInBtn;
+    private final List<String> teacherIdList=new ArrayList<>();
+    private final List<String> passwordList=new ArrayList<>();
     private DatabaseReference teacherRef,deptref;
     private String dept,shift,tdept;
 
@@ -45,7 +44,7 @@ public class TeacherLogin extends AppCompatActivity {
             setContentView(R.layout.activity_teacher_login);
             teacherIdEt=findViewById(R.id.teacher_Login_id);
             teacherPassword=findViewById(R.id.teacherLoginPassword);
-            teacherLogInBtn=findViewById(R.id.teacherLoginBtn);
+            AppCompatButton teacherLogInBtn = findViewById(R.id.teacherLoginBtn);
 
             teacherLogInBtn.setOnClickListener(new View.OnClickListener() {
                 @Override

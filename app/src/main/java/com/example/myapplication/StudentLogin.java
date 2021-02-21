@@ -72,42 +72,40 @@ public class StudentLogin extends AppCompatActivity {
 
 
                                     for(DataSnapshot ds1:dataSnapshot.getChildren()){
-                                        String year=ds1.getKey();
-                                        for (DataSnapshot ds2:ds1.getChildren()){
-                                            for (DataSnapshot ds3:ds2.getChildren()){
+                                        if(ds1.hasChildren()){
 
-                                                Student student=ds3.getValue(Student.class);
-                                                if(student.getId().equals(id)){
 
-                                                    studentList.add(student);
 
-                                                    SaveUser saveUser=new SaveUser();
-                                                    saveUser.saveStudent(getApplicationContext(),student);
+                                               Student student = ds1.getValue(Student.class);
+                                               if(student.getId().equals(id)){
+                                                   new SaveUser().saveStudent(getApplicationContext(),student);
+                                                   studentList.add(student);
+                                                   if(studentList.get(0).getId().equals(id) && studentList.get(0).getPassword().equals(pass)){
+                                                      Toast.makeText(getApplicationContext(),"Successfully Logged In",Toast.LENGTH_SHORT).show();
+                                                       new SaveUser().Student_saveData(getApplicationContext(),true);
+                                                       Intent intent=new Intent(StudentLogin.this,UserMainMenu.class);
+                                                       startActivity(intent);
+                                                       finish();
+                                                   }
+                                                   else {
+                                                       Toast.makeText(getApplicationContext(),"Entered wrong password",Toast.LENGTH_SHORT).show();
+                                                   }
 
-                                                }
 
-                                            }
+                                               }
+
+
+
+                                           }
+
 
                                         }
 
 
                                     }
 
-                                    if(studentList.contains(id) && studentList.contains(pass)){
 
 
-                                        Toast.makeText(getApplicationContext(),"Successfully Logged in",Toast.LENGTH_SHORT).show();
-                                        Intent intent=new Intent(getApplicationContext(),UserMainMenu.class);
-                                        startActivity(intent);
-                                        finish();
-
-                                    }
-                                    else {
-                                        Toast.makeText(getApplicationContext(),"This id is not registered",Toast.LENGTH_SHORT).show();
-
-                                    }
-
-                                }
 
 
                                 @Override

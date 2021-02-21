@@ -39,7 +39,7 @@ public class UserMainMenu extends AppCompatActivity  {
         btn1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(UserMainMenu.this,PdfUpload.class);
+                Intent intent1 = new Intent(UserMainMenu.this,ViewTimeTable.class);
                 startActivity(intent1);
             }
         });
@@ -74,8 +74,9 @@ public class UserMainMenu extends AppCompatActivity  {
 
 
     public void logout(MenuItem item) {
-        startActivity(new Intent(UserMainMenu.this,StudentLogin.class));
-        preferences.clearData(this);
+        new SaveUser().Student_saveData(getApplicationContext(),false);
+        Intent intent=new Intent(UserMainMenu.this,SelectType.class);
+        startActivity(intent);
         finish();
     }
 }

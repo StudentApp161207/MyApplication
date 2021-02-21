@@ -18,7 +18,6 @@ import androidx.appcompat.widget.Toolbar;
 import com.google.android.material.internal.NavigationMenu;
 import com.google.android.material.navigation.NavigationView;
 
-import static com.example.myapplication.preferences.*;
 
 public class MainMenu extends AppCompatActivity  {
     private  DrawerLayout drawerLayout;
@@ -75,8 +74,11 @@ public class MainMenu extends AppCompatActivity  {
     }
 
     public void logout(MenuItem item){
-        startActivity(new Intent(MainMenu.this,TeacherLogin.class));
-        preferences.clearData(this);
+        Intent intent=new Intent(MainMenu.this,SelectType.class);
+        SaveUser saveUser=new SaveUser();
+        saveUser.teacher_saveData(MainMenu.this,false);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
         finish();
     }
 

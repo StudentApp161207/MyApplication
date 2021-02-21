@@ -18,10 +18,24 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable(){
             @Override
             public void run() {
-                Intent homeIntent = new Intent(MainActivity.this,SelectType.class);
-                startActivity(homeIntent);
-                finish();
-            }
+
+
+                    if(new SaveUser().teacher_loadData(getApplicationContext())){
+                        startActivity(new Intent(MainActivity.this, MainMenu.class));
+                        finish();
+                    }else if(new SaveUser().Student_loadData(getApplicationContext())){
+                        startActivity(new Intent(MainActivity.this, UserMainMenu.class));
+                        finish();
+                    }
+                    else {
+                        startActivity(new Intent(MainActivity.this, SelectType.class));
+                        finish();
+                    }
+
+                }
+
+
+
         },SPLASH_TIME_OUT);
     }
 }
