@@ -7,13 +7,15 @@
     android:orientation="vertical"
     android:padding="17dp"
     android:gravity="center"
-    android:background="@drawable/back"
+    android:background="@drawable/bglogo"
     tools:context=".StudentLogin">
 
     <ImageView
+        android:padding="10dp"
+        android:background="@drawable/ovalsahpe"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/logo" />
+        android:src="@drawable/user2" />
 
     <TextView
         android:layout_marginTop="30dp"
@@ -33,17 +35,19 @@
         app:boxStrokeColor="@color/olive"
         app:boxBackgroundColor="@color/white"
         app:hintTextColor="@color/olive">
+
         <com.google.android.material.textfield.TextInputEditText
-            android:drawableTint="@color/olive"
-            android:drawablePadding="10dp"
-            android:drawableLeft="@drawable/ic_user"
             android:id="@+id/Student_Login_id"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:alpha="0.9"
+            android:drawableStart="@drawable/ic_user"
+            android:drawableLeft="@drawable/ic_user"
 
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/olive"
             android:hint="Username"
-            android:inputType="text"
-            android:drawableStart="@drawable/ic_user" />
+            android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -57,16 +61,17 @@
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:drawableTint="@color/olive"
-            android:drawablePadding="10dp"
             android:id="@+id/studentLoginPassword"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:alpha="0.9"
+            android:drawableStart="@drawable/ic_lock"
             android:drawableLeft="@drawable/ic_lock"
-            android:hint="Password"
+            android:drawablePadding="10dp"
 
-            android:inputType="textPassword"
-            android:drawableStart="@drawable/ic_lock" />
+            android:drawableTint="@color/olive"
+            android:hint="Password"
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton

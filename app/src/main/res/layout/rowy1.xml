@@ -1,45 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:id="@+id/mainLayout">
 
-    <ImageView
+    <TextView
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:src="@drawable/python"
-        android:id="@+id/image">
-    </ImageView>
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="A"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:background="@drawable/ovalsahpe"
+        android:id="@+id/img1"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
+
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Maintitle"
-            android:layout_margin="5dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
             android:id="@+id/maintext"
-            android:textColor="@color/black">
-        </TextView>
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Maintitle"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"></TextView>
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/subtext1"
+            android:layout_width="267dp"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="Subtitle"
-            android:id="@+id/subtext"
-            android:textColor="@color/material_on_surface_disabled"
+            android:layout_marginLeft="15dp"
+            android:text="coursecode"
+            android:textColor="#A39D9D"
             android:textSize="15dp"
-            android:textStyle="bold">
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="98dp"
+            tools:layout_editor_absoluteY="48dp"></TextView>
 
-        </TextView>
+        <TextView
+            android:id="@+id/subtext2"
+            android:layout_width="267dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="coursetutor"
+            android:textColor="#A39D9D"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="98dp"
+            tools:layout_editor_absoluteY="48dp"></TextView>
+
     </LinearLayout>
-
-
 
 </LinearLayout>

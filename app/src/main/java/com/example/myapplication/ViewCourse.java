@@ -20,8 +20,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Courselist_y1 extends AppCompatActivity {
-    FloatingActionButton addcourse;
+public class ViewCourse extends AppCompatActivity {
+
     RecyclerView recview;
     CourseAdapter adapter;
     DatabaseReference courseref;
@@ -30,36 +30,12 @@ public class Courselist_y1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_courselist_y1);
-        addcourse=(FloatingActionButton)findViewById(R.id.addbtn);
+
         recview = (RecyclerView)findViewById(R.id.rview);
         recview.setLayoutManager(new LinearLayoutManager(this));
         String url="https://my-application-c0d64-default-rtdb.firebaseio.com/";
 
-        addcourse.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Courselist_y1.this,AddCourse.class);
-                startActivity(intent);
-            }
-        });
-        courseref=FirebaseDatabase.getInstance(url).getReference("courselist");
-        courseref.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                courselist.clear();
-                for (DataSnapshot ds:dataSnapshot.getChildren()){
-                    model data = ds.getValue(model.class);
-                    courselist.add(data);
-                }
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-               FirebaseRecyclerOptions<model> options = new FirebaseRecyclerOptions.Builder<model>()
+        FirebaseRecyclerOptions<model> options = new FirebaseRecyclerOptions.Builder<model>()
                 .setQuery(FirebaseDatabase.getInstance(url).getReference("courselist"), model.class)
                 .build();
 

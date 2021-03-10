@@ -7,13 +7,15 @@
     android:orientation="vertical"
     android:padding="17dp"
     android:gravity="center"
-    android:background="@drawable/back"
+    android:background="@drawable/bglogo"
     tools:context=".TeacherLogin">
 
     <ImageView
+        android:padding="10dp"
+        android:background="@drawable/ovalsahpe"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/logo" />
+        android:src="@drawable/user1" />
 
     <TextView
         android:layout_marginTop="30dp"
@@ -40,6 +42,7 @@
             android:id="@+id/teacher_Login_id"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:alpha="0.9"
 
             android:hint="Username"
             android:inputType="text"
@@ -53,6 +56,7 @@
         app:boxStrokeColor="@color/olive"
         app:boxBackgroundColor="@color/white"
         app:hintTextColor="@color/olive"
+        android:alpha="0.9"
         app:passwordToggleDrawable="@drawable/ic_pass_icon_selector"
         app:passwordToggleEnabled="true">
 

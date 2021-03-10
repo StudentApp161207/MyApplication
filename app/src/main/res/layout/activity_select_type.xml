@@ -48,7 +48,7 @@
                     android:background="@drawable/ovalsahpe"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/csc" />
+                    android:src="@drawable/user1" />
 
 
 
@@ -84,7 +84,7 @@
                     android:layout_height="100dp"
                     android:background="@drawable/ovalsahpe"
                     android:padding="12dp"
-                    android:src="@drawable/student1" />
+                    android:src="@drawable/user2" />
 
 
 
